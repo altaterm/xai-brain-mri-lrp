@@ -1,0 +1,12 @@
+# CPU build for local use; on Google Colab the preinstalled GPU build is used instead.
+# Install torch/torchvision from https://download.pytorch.org/whl/cpu (see README).
+torch==2.15.0
+torchvision==0.29.2
+numpy==2.5.4
+pandas==3.1.1
+matplotlib==3.11.2
+scikit-learn==1.9.1
+opencv-python==5.0.0.93
+ipykernel==7.4.0
+nbconvert==7.17.2
+jupytext==1.19.6

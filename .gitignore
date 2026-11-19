@@ -1,0 +1,18 @@
+# Local Python environment
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+
+# Raw clone of the dataset repository (an organised copy is in xai-series/data/brain_mri)
+Brain-Tumor-Classification-DataSet/
+
+# Trained weights (~512 MB, above GitHub's 100 MB limit) - re-created by the notebook
+xai-series/models/
+*.pt
+
+# Word lock files and exported PDFs
+~$*
+*.pdf
+
+# Secrets
+.env

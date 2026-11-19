@@ -1,0 +1,252 @@
+{
+  "test_accuracy": 0.751269035532995,
+  "n_test": 394,
+  "per_class": {
+    "Glioma": {
+      "precision": 1.0,
+      "recall": 0.31,
+      "f1-score": 0.473,
+      "support": 100.0
+    },
+    "Meningioma": {
+      "precision": 0.66,
+      "recall": 0.913,
+      "f1-score": 0.766,
+      "support": 115.0
+    },
+    "No tumour": {
+      "precision": 0.705,
+      "recall": 1.0,
+      "f1-score": 0.827,
+      "support": 105.0
+    },
+    "Pituitary": {
+      "precision": 1.0,
+      "recall": 0.743,
+      "f1-score": 0.853,
+      "support": 74.0
+    }
+  },
+  "macro_f1": 0.7297976580625514,
+  "tumour_sensitivity": 0.8477508650519031,
+  "tumour_specificity": 1.0,
+  "confusion_matrix": [
+    [
+      31,
+      42,
+      27,
+      0
+    ],
+    [
+      0,
+      105,
+      10,
+      0
+    ],
+    [
+      0,
+      0,
+      105,
+      0
+    ],
+    [
+      0,
+      12,
+      7,
+      55
+    ]
+  ],
+  "class_order": [
+    "Glioma",
+    "Meningioma",
+    "No tumour",
+    "Pituitary"
+  ],
+  "ece": 0.14716884584596313,
+  "entropy_correct_mean": 0.23028544976884752,
+  "entropy_wrong_mean": 0.39928084116642004,
+  "selective_accuracy": {
+    "0.1": 1.0,
+    "0.15": 0.9830508474576272,
+    "0.2": 0.9873417721518988,
+    "0.25": 0.9693877551020408,
+    "0.3": 0.9491525423728814,
+    "0.35": 0.9202898550724637,
+    "0.4": 0.9050632911392406,
+    "0.45": 0.8926553672316384,
+    "0.5": 0.868020304568528,
+    "0.55": 0.8433179723502304,
+    "0.6": 0.8389830508474576,
+    "0.65": 0.83203125,
+    "0.7": 0.8260869565217391,
+    "0.75": 0.8141891891891891,
+    "0.8": 0.8063492063492064,
+    "0.85": 0.7940298507462686,
+    "0.9": 0.780281690140845,
+    "0.95": 0.7647058823529411,
+    "1.0": 0.751269035532995
+  },
+  "best_val_acc": 0.9477351903915405,
+  "lrp_conservation_median": 0.13302212208509445,
+  "lrp_nonfinite_maps": 0,
+  "lrp_in_head_mean": 0.6374704005376337,
+  "cam_in_head_mean": 0.5852395135833679,
+  "head_area_mean": 0.5697286667681032,
+  "in_head_by_class": {
+    "lrp_in_head": {
+      "Glioma": 0.644,
+      "Meningioma": 0.66,
+      "No tumour": 0.629,
+      "Pituitary": 0.605
+    },
+    "cam_in_head": {
+      "Glioma": 0.572,
+      "Meningioma": 0.601,
+      "No tumour": 0.518,
+      "Pituitary": 0.674
+    },
+    "head_area": {
+      "Glioma": 0.579,
+      "Meningioma": 0.611,
+      "No tumour": 0.505,
+      "Pituitary": 0.584
+    }
+  },
+  "top20_iou_median": 0.16417910447761194,
+  "rank_corr_median": 0.27030002695376937,
+  "deletion_auc": {
+    "LRP": 0.3781825324892998,
+    "Grad-CAM": 0.3908179241418839,
+    "Random": 0.4528132635354996
+  },
+  "deletion_n_images": 80,
+  "examples": {
+    "correct": [
+      {
+        "index": 65,
+        "file": "image(68).jpg",
+        "true": "Glioma",
+        "pred": "Glioma",
+        "correct": true,
+        "confidence": 0.9999921321868896,
+        "entropy": 0.00026223902846934536,
+        "lrp_conservation": 0.15351691842079163,
+        "lrp_in_head": 0.6241781115531921,
+        "cam_in_head": 0.6024587750434875,
+        "head_area": 0.5065768494897959,
+        "top20_iou": 0.21875,
+        "rank_corr": 0.4769399758568215
+      },
+      {
+        "index": 209,
+        "file": "image(95).jpg",
+        "true": "Meningioma",
+        "pred": "Meningioma",
+        "correct": true,
+        "confidence": 0.9989749193191528,
+        "entropy": 0.012281306626787902,
+        "lrp_conservation": 0.12967373430728912,
+        "lrp_in_head": 0.6593880653381348,
+        "cam_in_head": 0.5139248371124268,
+        "head_area": 0.3954480229591837,
+        "top20_iou": 0.21875,
+        "rank_corr": 0.33153949574321034
+      },
+      {
+        "index": 318,
+        "file": "image(99).jpg",
+        "true": "No tumour",
+        "pred": "No tumour",
+        "correct": true,
+        "confidence": 0.9999107122421265,
+        "entropy": 0.004371468119871854,
+        "lrp_conservation": 0.13757556676864624,
+        "lrp_in_head": 0.7330119609832764,
+        "cam_in_head": 0.6132472157478333,
+        "head_area": 0.6124441964285714,
+        "top20_iou": 0.11428571428571428,
+        "rank_corr": 0.036070174099524385
+      },
+      {
+        "index": 341,
+        "file": "image(38).jpg",
+        "true": "Pituitary",
+        "pred": "Pituitary",
+        "correct": true,
+        "confidence": 0.9991886019706726,
+        "entropy": 0.011282743109131398,
+        "lrp_conservation": 0.13227471709251404,
+        "lrp_in_head": 0.2636245787143707,
+        "cam_in_head": 0.18962092697620392,
+        "head_area": 0.4004703443877551,
+        "top20_iou": 0.09859154929577464,
+        "rank_corr": 0.22908814978363884
+      }
+    ],
+    "false_negatives": [
+      {
+        "index": 31,
+        "file": "image(37).jpg",
+        "true": "Glioma",
+        "pred": "No tumour",
+        "correct": false,
+        "confidence": 0.9994950294494629,
+        "entropy": 0.024090034488522923,
+        "lrp_conservation": 0.15606479346752167,
+        "lrp_in_head": 0.6832160353660583,
+        "cam_in_head": 0.6955389380455017,
+        "head_area": 0.6081393494897959,
+        "top20_iou": 0.0,
+        "rank_corr": -0.42562737630638764
+      },
+      {
+        "index": 124,
+        "file": "image(18).jpg",
+        "true": "Meningioma",
+        "pred": "No tumour",
+        "correct": false,
+        "confidence": 0.985181450843811,
+        "entropy": 0.11690747494520243,
+        "lrp_conservation": 0.11769124865531921,
+        "lrp_in_head": 0.7589453458786011,
+        "cam_in_head": 0.7825736999511719,
+        "head_area": 0.7828244579081632,
+        "top20_iou": 0.3448275862068966,
+        "rank_corr": 0.3174042488417377
+      }
+    ],
+    "false_positives": [],
+    "confusions": [
+      {
+        "index": 16,
+        "file": "image(23).jpg",
+        "true": "Glioma",
+        "pred": "Meningioma",
+        "correct": false,
+        "confidence": 0.991465151309967,
+        "entropy": 0.09767262355415122,
+        "lrp_conservation": 0.13336148858070374,
+        "lrp_in_head": 0.6819630265235901,
+        "cam_in_head": 0.6577977538108826,
+        "head_area": 0.7934072066326531,
+        "top20_iou": 0.2,
+        "rank_corr": 0.40821412739763213
+      }
+    ],
+    "patient_case": {
+      "index": 209,
+      "file": "image(95).jpg",
+      "true": "Meningioma",
+      "pred": "Meningioma",
+      "correct": true,
+      "confidence": 0.9989749193191528,
+      "entropy": 0.012281306626787902,
+      "lrp_conservation": 0.12967373430728912,
+      "lrp_in_head": 0.6593880653381348,
+      "cam_in_head": 0.5139248371124268,
+      "head_area": 0.3954480229591837,
+      "top20_iou": 0.21875,
+      "rank_corr": 0.33153949574321034
+    }
+  }
+}

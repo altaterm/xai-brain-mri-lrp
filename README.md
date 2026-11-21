@@ -1,24 +1,12 @@
-# Assignment 2: XAI on MRI Data
+# T2 : XAI on MRI Data
 
 **Explaining a brain-tumour MRI classifier with Layer-wise Relevance Propagation (LRP) and Grad-CAM**
-
-Mohaned Altater (26068926), Explainable AI
 
 A VGG16 network, fine-tuned on four MRI classes (glioma, meningioma, no tumour, pituitary)
 following `05_lrp.py` from [deepfindr/xai-series](https://github.com/deepfindr/xai-series),
 is explained with LRP and Grad-CAM. The explanations are then evaluated quantitatively
 (deletion test, region relevance score, LRP vs Grad-CAM agreement) and used to explain the
 diagnosis to a patient and the model to a doctor.
-
-## Where to find each part of the assignment
-
-| Task | Where |
-|---|---|
-| Task 1: download the dataset | `dataset_counts.csv`; notebook cell 2 (clones the dataset and prints the counts) |
-| Task 2: dataset under `xai-series/data/brain_mri` | `xai-series/data/brain_mri/training/` (2,870 images) and `testing/` (394 images) |
-| Task 3: LRP + second XAI method (Grad-CAM) | `xai-series/05_lrp_brain_mri.py` (code), `05_lrp_brain_mri_colab_v2.ipynb` (executed notebook with all outputs), `xai-series/figures/`; report Section 4 |
-| Task 4: doctor to patient, data scientist to doctor | Report, Sections 5.1 and 5.2 |
-| Bonus: LRP vs Grad-CAM, false positives/negatives, explanation metrics | Report, Section 6.2; `xai-series/results/summary.json` |
 
 **Report:** `Assignment2_XAI_Report_Mohaned_Altater.docx`, written in the lecturer's report template.
 

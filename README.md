@@ -16,11 +16,11 @@ diagnosis to a patient and the model to a doctor.
 |---|---|
 | Task 1: download the dataset | `dataset_counts.csv`; notebook cell 2 (clones the dataset and prints the counts) |
 | Task 2: dataset under `xai-series/data/brain_mri` | `xai-series/data/brain_mri/training/` (2,870 images) and `testing/` (394 images) |
-| Task 3: LRP + second XAI method (Grad-CAM) | `xai-series/05_lrp_brain_mri.py` (code), `05_lrp_brain_mri_colab_v2.ipynb` (executed notebook with all outputs), `xai-series/figures/` |
-| Task 4: doctor to patient, data scientist to doctor | Report, Sections 5 and 6 |
-| Bonus: LRP vs Grad-CAM, false positives/negatives, explanation metrics | Report, Section 4; `xai-series/results/summary.json` |
+| Task 3: LRP + second XAI method (Grad-CAM) | `xai-series/05_lrp_brain_mri.py` (code), `05_lrp_brain_mri_colab_v2.ipynb` (executed notebook with all outputs), `xai-series/figures/`; report Section 4 |
+| Task 4: doctor to patient, data scientist to doctor | Report, Sections 5.1 and 5.2 |
+| Bonus: LRP vs Grad-CAM, false positives/negatives, explanation metrics | Report, Section 6.2; `xai-series/results/summary.json` |
 
-**Report:** `Assignment2_XAI_Report_Mohaned_Altater.docx`
+**Report:** `Assignment2_XAI_Report_Mohaned_Altater.docx`, written in the lecturer's report template.
 
 ## Repository layout
 
@@ -33,8 +33,9 @@ diagnosis to a patient and the model to a doctor.
 └── xai-series/                                   deepfindr/xai-series (cloned)
     ├── 05_lrp.py                                 original reference code (unchanged)
     ├── 05_lrp_brain_mri.py                       this assignment's code (# %% cells)
+    ├── report_figures.py                         report-only figures (case sheets, dataset evidence) + duplicate check
     ├── data/brain_mri/{training,testing}/        Task 2: the MRI dataset
-    ├── figures/                                  all figures used in the report
+    ├── figures/                                  all figures used in the report (01-10 from the notebook, 11-14 from report_figures.py)
     ├── results/                                  summary.json, per_image_results.csv, training_history.json
     └── 00-04_*.py, utils.py, data/*.csv          other files of the original repository (not used)
 ```
@@ -71,9 +72,13 @@ For a quick pipeline check on a small subset, set `$env:QUICK="1"` before runnin
 | Metric | Value |
 |---|---|
 | Validation / test accuracy | 94.8% / 75.1% |
+| Test accuracy without the 88 test images that are copies of training images | 68.0% |
 | Tumour vs healthy: sensitivity / specificity | 84.8% / 100% |
 | Deletion AUC, lower is better (LRP / Grad-CAM / random) | 0.378 / 0.391 / 0.453 |
 | Share of positive evidence inside the head (LRP / Grad-CAM / head area) | 0.64 / 0.59 / 0.57 |
+
+Note: a byte-level check (`report_figures.py`) found that 88 of the 105 `no_tumor` test images are exact
+copies of training images in the original dataset, so the no-tumour results are optimistic (report Section 3.3).
 
 ## Sources
 
